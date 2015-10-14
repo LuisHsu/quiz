@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 
 int cmp(const void *a, const void *b)
@@ -17,14 +18,14 @@ char smallest_character(char str[],char c)
     return str[0];
 }
 
-int main()
+int main(int argc, char *argv[])
 {
     FILE *fout=fopen("test.txt","w");
 
     srand(time(NULL));
     char characters[26] = "abcdefghijklmnopqrstuvwxyz";
 
-    for(int i=0; i<100000; ++i) {
+    for(int i=0; i<atoi(argv[1]); ++i) {
         int size = rand() % 80;
         char outp[size+2];
         // generate
