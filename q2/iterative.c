@@ -10,7 +10,7 @@ char smallest_character(char str[],char c)
             return str[i];
         }
     }
-    return c;
+    return str[0];
 
 }
 
