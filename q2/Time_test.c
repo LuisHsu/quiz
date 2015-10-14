@@ -40,6 +40,7 @@ int main(int argc, char *argv[])
         if(checkChar==retChar) {
             correct++;
         } else {
+            printf("Incorrect: %s %c %c\n",testData,testChar,checkChar);
             incorrect++;
         }
         printf("Test %d finished\n",testCount);
