@@ -1,0 +1,9 @@
+set terminal png
+set output "miss.png"
+set xlabel "cache-misses"
+set ylabel "frequency"
+unset key
+binwidth=100
+bin(x,width)=width*floor(x/width)
+
+plot 'miss.txt' using (bin($1,binwidth)):(1.0) smooth freq with lines 
